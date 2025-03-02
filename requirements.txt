@@ -6,5 +6,6 @@ pypdf2==3.0.1
 rank-bm25==0.2.2
 sentence-transformers==2.2.2
 streamlit==1.27.0
-torch==2.0.1
-transformers==4.34.0
+torch==2.1.0
+accelerate==0.25.0
+transformers==4.35.0
