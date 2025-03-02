@@ -2,8 +2,8 @@ import streamlit as st
 import os
 import traceback
 import sys
-from financial_rag import FinancialRAG
-from guardrails import check_input_guardrail, check_output_guardrail
+from app.financial_rag import FinancialRAG
+from app.guardrails import check_input_guardrail, check_output_guardrail
 
 # Set up basic logging to console
 import logging
@@ -92,7 +92,7 @@ def main():
                         try:
                             # Create data directory if it doesn't exist
                             import os
-                            from config import DATA_DIR
+                            from app.config import DATA_DIR
                             os.makedirs(DATA_DIR, exist_ok=True)
                             
                             # Save uploaded files to data directory
