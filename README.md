@@ -1,65 +1,36 @@
-# Financial RAG Chatbot
+# Financial RAG Chatbot - Streamlit Cloud Deployment
 
-A financial document analysis chatbot using hybrid retrieval-augmented generation (RAG) with open-source models.
+This folder contains all necessary files for deploying the Financial RAG Chatbot to Streamlit Cloud.
+
+## Deployment Instructions
+
+1. Create a new Streamlit Cloud app
+2. Connect to this GitHub repository
+3. Set the main file path to `deploy_streamlit/streamlit_app.py`
+4. Deploy the application
 
 ## Features
 
-- **Hybrid Search** - Combines BM25 keyword search with dense vector embeddings
-- **Open-Source Models** - Uses Sentence Transformers for embeddings and DistilBERT for analysis
-- **Document Upload** - Upload and analyze your own financial statements
-- **Interactive UI** - Clean Streamlit interface for easy interaction
-- **Input/Output Guardrails** - Safety checks for user queries and generated responses
+- Hybrid search (BM25 + Dense Embeddings)
+- Open-source language models
+- Financial document analysis
+- Interactive query interface
+- Confidence scoring
 
-## Quick Start
+## Requirements
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+All dependencies are listed in the `requirements.txt` file and will be automatically installed during deployment.
 
-2. Run the application:
-   ```bash
-   streamlit run main.py
-   ```
+## File Structure
 
-3. Open in your browser:
-   - The app will be available at http://localhost:8501
-
-## Usage
-
-1. Upload financial statements (PDF format) through the sidebar
-2. Ask questions about financial information in natural language
-3. View responses with confidence scores and source references
-
-## Sample Questions
-
-- What was the revenue in the last fiscal year?
-- How did operating expenses change year-over-year?
-- What are the main risk factors mentioned?
-- What is the company's cash position?
-
-## Project Structure
-
-```
-financial-rag-chatbot/
-├── .streamlit/                # Streamlit configuration
-├── app/                       # Application code
-│   ├── config.py              # Configuration settings
-│   ├── financial_rag.py       # Main RAG implementation
-│   ├── guardrails.py          # Input/output safety checks  
-│   ├── hybrid_search.py       # Hybrid search implementation
-│   ├── llm_generator.py       # Language model generation
-│   └── preprocessing.py       # Document preprocessing
-├── data/                      # Data directory for documents
-├── requirements.txt           # Project dependencies
-└── main.py                    # Streamlit app entry point
-```
-
-## Technologies Used
-
-- **Streamlit** - Web application framework
-- **FAISS** - Vector database for similarity search
-- **Sentence Transformers** - Text embeddings
-- **Transformers** - Language models for text generation
-- **PyPDF2** - PDF parsing
-- **BM25** - Keyword-based retrieval algorithm
+- `streamlit_app.py`: Entry point for Streamlit Cloud
+- `main.py`: Main application logic
+- `app/`: Core application components
+  - `financial_rag.py`: RAG system implementation
+  - `hybrid_search.py`: Hybrid search logic
+  - `preprocessing.py`: Document processing utilities
+  - `llm_generator.py`: Response generation module
+  - `guardrails.py`: Input/output security checks
+  - `config.py`: Configuration parameters
+- `.streamlit/`: Streamlit configuration files
+- `setup.sh`: Setup script for deployment

@@ -5,7 +5,7 @@ from rank_bm25 import BM25Okapi
 import re
 from sentence_transformers import SentenceTransformer
 import logging
-from config import EMBEDDINGS_MODEL_NAME, BM25_WEIGHT, SEMANTIC_WEIGHT
+from app.config import EMBEDDINGS_MODEL_NAME, BM25_WEIGHT, SEMANTIC_WEIGHT
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

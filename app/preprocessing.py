@@ -4,7 +4,7 @@ import glob
 from typing import List, Dict, Tuple, Any
 import PyPDF2
 import logging
-from config import DATA_DIR, CHUNK_SIZE, CHUNK_OVERLAP
+from app.config import DATA_DIR, CHUNK_SIZE, CHUNK_OVERLAP
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

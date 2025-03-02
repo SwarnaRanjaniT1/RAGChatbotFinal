@@ -2,12 +2,12 @@ import os
 import numpy as np
 from typing import List, Tuple, Dict, Any
 import faiss
-from preprocessing import preprocess_documents, chunk_text
-from hybrid_search import hybrid_search
-from llm_generator import generate_response
+from app.preprocessing import preprocess_documents, chunk_text
+from app.hybrid_search import hybrid_search
+from app.llm_generator import generate_response
 import pickle
 import logging
-from config import VECTOR_DB_PATH, CHUNKS_PATH, CHUNKS_METADATA_PATH, EMBEDDINGS_MODEL_NAME
+from app.config import VECTOR_DB_PATH, CHUNKS_PATH, CHUNKS_METADATA_PATH, EMBEDDINGS_MODEL_NAME
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

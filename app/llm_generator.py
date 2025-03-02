@@ -3,7 +3,7 @@ from transformers import AutoModelForMaskedLM, AutoTokenizer, AutoModel, pipelin
 import torch
 import logging
 import re
-from config import LLM_MODEL_NAME, MAX_NEW_TOKENS, TEMPERATURE, PROMPT_TEMPLATE
+from app.config import LLM_MODEL_NAME, MAX_NEW_TOKENS, TEMPERATURE, PROMPT_TEMPLATE
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
